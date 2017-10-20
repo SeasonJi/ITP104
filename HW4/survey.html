@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+ <head>
+   <title>Survey</title>
+   <style>
+   #outercontainer{
+     border-radius: 10px;
+     width: 600px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 85px;
+     background-color: #443217;
+     background-color: rgba(87, 167, 237, 0.6);
+     color: white;
+     padding: 20px;
+     /*opacity: 0.4; same as the rgba stuff before*/
+   }
+
+   .form-row{
+     margin-bottom: 10px;
+   }
+
+   label{
+     width: 220px;
+     float: left;
+     text-align: right;
+     margin-bottom: 10px;
+     margin-right: 5px;
+     font-family: courier;
+   }
+
+   .radio-label{
+     float: none;
+   }
+
+   .checkbox-label{
+     float: none;
+   }
+
+   body{
+     background-image: url('bg.jpg');
+     background-repeat: no-repeat;
+     background-size: 100%;
+   }
+   </style>
+ </head>
+
+ <body>
+   <div id="outercontainer">
+     <h3 style="text-align: center; color: #F2D7D5; font-family: Tw Cen MT;">HOW OPTIMISTIC ARE YOU ABOUT YOUR FUTURE?</h3>
+
+     <form action="http://www.usc.edu/cgi-bin/form_handler" method="POST">
+
+       <div class="form-row">
+         <label for="name">Name: </label>   <input type="text" name="name" />
+       </div>
+
+
+       <div class="form-row">
+         <label for="email">Email: </label>   <input type="text" name="email" />
+       </div>
+
+       <div class="form-row">
+         <label>Gender: </label>
+         <input type="radio" name="gender" value="male"/>
+         <label class="radio-label" for="male">Male</label>
+         <input type="radio" name="gender" value="female"/>
+         <label class="radio-label" for="female">Female</label>
+       </div>
+
+       <div class="form-row">
+         <label>Your academic field: </label>
+         <input  type="checkbox" name="field" value="business" /> <label class="checkbox-label" for="business">Business</label>
+         <input  type="checkbox" name="field" value="engineering" /> <label class="checkbox-label" for="engineering">Engineering</label>
+         <br />
+         <input  type="checkbox" name="field" value="liberal arts" /> <label class="checkbox-label" for="liberal arts">Liberal Arts</label>
+         <input  type="checkbox" name="major" value="science" /> <label class="checkbox-label" for="science">Science</label>
+         
+       </div>
+
+       <div class="form-row">
+         <label>Please specify your major: </label>
+         <textarea name="subject" style="width: 180px;"></textarea>
+       </div>
+
+
+       <div class="form-row">
+         <label>School Year: </label>
+         <select>
+           <option name="Message" value="feshman">Freshman</option>
+           <option name="Message" value="sophomore">Sophomore</option>
+           <option name="Message" value="junior">Junior</option>
+           <option name="Message" value="senior">Senior</option>
+           <option name="Message" value="graduate">Graduate</option>
+         </select>
+       </div>
+
+
+       <div class="form-row">
+         <label>Your attitude towards future: </label>
+         <select>
+           <option name="Message" value="Very optimistic">Very optimistic</option>
+           <option name="Message" value="Optimistic">Optimistic</option>
+           <option name="Message" value="Unsure, and I can accept whatever the future is">Unsure, and I can accept whatever the future is</option>
+           <option name="Message" value="Unsure, and I cannot accept a mediocre future">Unsure, and I cannot accept a mediocre future</option>
+           <option name="Message" value="Pessimistic">Pessimistic</option>
+           <option name="Message" value="Very pessimistic">Very pessimistic</option>
+         </select>
+       </div>
+
+       <br />
+
+
+       <div class="form-row">
+         <label>Why do you hold such an attitude? </label>
+         <textarea name="comments" style="height: 50px; width: 300px;"></textarea>
+       </div>
+
+       <div style="text-align: center; ">
+         <!-- <input type="submit" style="width: 20em; height: 20em;" /> -->
+         <button name="submit">Submit</button>
+       </div>
+
+
+     </form>
+   </div>
+ </body>
+</html>
